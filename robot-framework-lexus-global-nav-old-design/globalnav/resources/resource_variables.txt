@@ -1,0 +1,191 @@
+*** Variables ***
+
+| ${SEDANS}	    | xpath=//span[contains(text(), "Sedans")] |
+
+| ${IS ELEMENT} | css=img[alt=\'Lexus IS\'] |
+| ${ES ELEMENT} | css=img[alt=\'Lexus ES\'] |
+| ${GS ELEMENT}	| css=img[alt=\'Lexus GS\'] |
+| ${LS ELEMENT}	| css=img[alt=\'Lexus LS\'] |
+| ${IS NAME}    | Lexus IS |
+| ${ES NAME}    | Lexus ES |
+| ${GS NAME}    | Lexus GS |
+| ${LS NAME}    | Lexus LS |
+| ${IS URL}	    | models/IS |
+| ${ES URL}	    | models/ES |
+| ${GS URL}	    | models/GS |
+| ${LS URL}	    | models/LS |
+
+
+| ${SUVS} |	xpath=//span[contains(text(), "SUVs")] |
+
+| ${NX ELEMENT} | css=img[alt=\'Lexus NX\'] |
+| ${RX ELEMENT} | css=img[alt=\'Lexus RX\'] |
+| ${LX ELEMENT}	| css=img[alt=\'Lexus LX\'] |
+| ${GX ELEMENT}	| css=img[alt=\'Lexus GX\'] |
+| ${NX NAME}	| Lexus NX |
+| ${RX NAME}	| Lexus RX |
+| ${LX NAME}	| Lexus LX |
+| ${GX NAME}	| Lexus GX |
+| ${NX URL}		| models/NX |
+| ${RX URL}	    | models/RX |
+| ${LX URL}		| models/LX |
+| ${GX URL}		| models/GX |
+
+
+${COUPES}		xpath=//span[contains(text(), "Coupes")]
+
+${RC ELEMENT}	css=img[alt=\'Lexus RC\']
+${RCF ELEMENT}	css=img[alt=\'Lexus RC F\']
+${ISC ELEMENT}	css=img[alt=\'Lexus IS C\']
+${RC NAME}		Lexus RC
+${RCF NAME}		Lexus RC F
+${ISC NAME}		Lexus IS - Convertible
+${RC URL}		models/RC
+${RCF URL}		models/RCF
+${ISC URL}		models/ISC
+
+
+${HYBRIDS}		xpath=//span[contains(text(), "Hybrids")]
+
+${CTH ELEMENT}	css=img[alt=\'Lexus CT HYBRID\']
+${RXH ELEMENT}	css=img[alt=\'Lexus RX HYBRID\']
+${NXH ELEMENT}  css=img[alt=\'Lexus NX HYBRID\']
+${ESH ELEMENT}	css=img[alt=\'Lexus ES HYBRID\']
+${GSH ELEMENT}	css=img[alt=\'Lexus GS HYBRID\']
+${LSH ELEMENT}	css=img[alt=\'Lexus LS HYBRID\']
+${CTH NAME}		Lexus CT
+${RXH NAME}		Lexus RX
+${NXH NAME}		Lexus NX
+${ESH NAME}		Lexus ES
+${GSH NAME}		Lexus GS
+${LSH NAME}		Lexus LS
+${CTH URL}		models/CT-hybrid
+${RXH URL}		models/RX-hybrid
+${NXH URL}		models/NX-hybrid
+${ESH URL}		models/ES-hybrid
+${GSH URL}		models/GS-hybrid
+${LSH URL}		models/LS-hybrid
+
+
+${F PERFORMANCE}	xpath=//span[contains(text(), "F Performance")]
+
+${RCF-2 ELEMENT}	xpath=.//*[@id='category_F Performance']/a[1]/div/img
+${LFA ELEMENT}		css=img[alt=\'Lexus LFA\']
+${F SPORT ELEMENT}	css=img[alt=\'Lexus F/F SPORT\']
+# RCF-2 name can use same as RCF original
+${LFA NAME}			Lexus LFA
+${F SPORT NAME}		Lexus Performance
+# RCF-2 url can use same as RCF original
+${LFA URL}			models/LFA
+${F SPORT URL}		performance
+
+
+${FUTURE}		xpath=//span[contains(text(), "Future")]
+
+${LFLC ELEMENT}		css=img[alt=\'Lexus LF-LC\']
+${LFC2 ELEMENT}		css=img[alt=\'Lexus LF-C2\']
+# ${THE NEXT F ELEMENT}  Not yet in global nav, but on future page  
+${LFLC NAME}		Lexus LF-LC
+${LFC2 NAME}		Lexus LF-C2
+${THE NEXT F NAME}	THE NEXT F
+${LFLC URL}			concept
+${LFC2 URL}			concept/LFC2
+${THE NEXT F URL}	concept/thenextf
+
+# ********************************************************
+
+| ${SHOPPING TOOLS}	            | id=shoppingTools |
+
+| ${FINANCIAL SERVICES ELEMENT} | css=a[title=\'financial services\'] |
+| ${ACCESSORIES ELEMENT}		| css=a[title=\'accessories\'] |
+| ${SPECIAL OFFERS ELEMENT}		| css=a[title=\'special offers\'] |
+| ${SIGN UP ELEMENT}			| css=a[title=\'sign up\'] |
+
+| ${FINANCIAL SERVICES NAME}	| Lexus Financial Services |
+| ${ACCESSORIES NAME}			| Lexus Accessories and F Performance Parts |
+| ${SPECIAL OFFERS NAME}		| Los Angeles California Lexus Specials and Offers |
+| ${SIGN UP NAME}				| / |
+
+| ${FINANCIAL SERVICES URL}     | https://www.lexusfinancial.com/pub/home/ |
+| ${ACCESSORIES URL}		    | /accessories/ |
+| ${SPECIAL OFFERS URL}		    | http://www.yourlexusdealer.com/Los_Angeles_California/index.html |
+| ${SIGN UP URL}			    | http://www.lexus.com/request-newsletter |
+
+# *********************************************************
+
+${CPO}				            id=navCPODropButton
+
+${VEHICLE SEARCH ELEMENT}	    css=a[title=\'vehicle search\']
+${CPO OVERVIEW ELEMENT}		    css=a[title=\'cpo overview\']
+${VEHICLE LIBRARY ELEMENT}	    css=a[title=\'vehicle library\']
+
+${VEHICLE SEARCH NAME}		    Lexus Certified Pre-Owned
+${CPO OVERVIEW NAME}		    What is a Certified Pre Owned Car?
+${VEHICLE LIBRARY NAME}			Lexus Certified Pre-Owned 
+
+${VEHICLE SEARCH URL}		    /cpo/index.html
+${CPO OVERVIEW URL}				/cpo/overview/index.html
+${VEHICLE LIBRARY URL}			/cpo/model_library/index.html
+
+# *********************************************************
+
+${OWNER'S RESOURCES}			id=ownersDropButton
+
+${MY LEXUS ELEMENT}	            css=a[title=\'my lexus\']
+${OWNER BENEFITS ELEMENT}		css=a[title=\'owner benefits\']
+${PAY MY BILL ELEMENT}	        css=a[title=\'pay my bill\']
+${LEXUS ENFORM ELEMENT}         css=a[title=\'lexus enform\']
+${SCHEDULED MAINT ELEMENT}	    css=a[title=\'scheduled maintenance\']
+${FAQ ELEMENT}	                css=a[title=\'faq\']
+${LEXUS MAGAZINE ELEMENT}       css=a[title=\'lexus magazine\']
+${LEXUS NAVIGATION ELEMENT}	    css=a[title=\'lexus navigation\']
+${RECALLS ELEMENT}	            css=a[title=\'Safety Recalls\']
+
+${MY LEXUS NAME}	            Lexus Drivers - My Lexus
+${OWNER BENEFITS NAME}		    Lexus Drivers Owner Benefits
+${PAY MY BILL NAME}	            Lexus Financial Services
+${LEXUS ENFORM NAME}            Lexus Drivers Lexus Enform OverView
+${SCHEDULED MAINT NAME}	        Lexus Drivers My Lexus Maintenance Schedule
+${FAQ NAME}	                    FAQs
+${LEXUS MAGAZINE NAME}          Lexus Stories: A Passion for Living & Driving
+${LEXUS NAVIGATION NAME}	    Lexus
+${RECALLS NAME}	                Lookup Safety Recalls & Service Campaigns by VIN
+
+${MY LEXUS URL}	            https://secure.drivers.lexus.com/lexusdrivers/my-lexus/home.do
+${OWNER BENEFITS URL}		https://secure.drivers.lexus.com/lexusdrivers/benefits/home.do
+${PAY MY BILL URL}	        https://www.lexusfinancial.com/pub/home/
+${LEXUS ENFORM URL}         https://secure.drivers.lexus.com/lexusdrivers/lexusenform/home.do
+${SCHEDULED MAINT URL}	    https://secure.drivers.lexus.com/lexusdrivers/info/my-lexus/service/maintenance-schedule.do
+${FAQ URL}	                http://lexus2.custhelp.com/
+${LEXUS MAGAZINE URL}       https://secure.drivers.lexus.com/lexusdrivers/magazine/home.do
+${LEXUS NAVIGATION URL}	    http://www.lexusnavigation.com/
+${RECALLS URL}	            http://www.toyota.com/recall
+
+# *********************************************************
+
+${LEXUS LOGO ELEMENT}		xpath=.//*[@id='logo']/a
+${LEXUS LOGO NAME}			Lexus - Luxury Sedans, SUVs, Hybrids, and Performance Cars
+${LEXUS LOGO URL}			lexus.com
+
+${BYL ELEMENT}		        xpath=//a[contains(text(), "Build Your Lexus")]
+${BYL NAME}			        Build Your Lexus
+${BYL URL}                  lexus.com/build-your-lexus
+
+${FIND A DEALER ELEMENT}    xpath=//a[contains(text(), "Find a Dealer")]
+${FIND A DEALER NAME}	    Lexus - Find a Dealer
+${FIND A DEALER URL}        lexus.com/dealers
+
+# *********************************************************
+
+| ${SEARCH FIELD ELEMENT} | id=nav_search_field |
+
+| ${1 SEARCH WORD} | lexus | 
+| ${MULTIPLE WORDS} | bingo was his name | 
+| ${2 SEARCH WORDS} | Lexus IS | 
+| ${TOO LONG SEARCH} | this text is way too long for search | 
+
+| ${SEARCH URL PART 1} | lexus.com/solr/search_lexus.jsp?qt= | 
+| ${SEARCH URL PART 2} | &col=lexus | 
+
+
+# *********************************************************
